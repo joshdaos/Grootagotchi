@@ -1,4 +1,24 @@
+/* main colors
+#E07A5F - Terra Cotta
+#F4F1DE - Eggshell
+#3d405b - Independence
+#81b29a - Green Sheen 
+#f2cc8f - Deep Champagne
+*/
+
+
+* {
+    box-sizing: border-box;
+}
+
 h1 {
-    color: royalblue;
-    padding: 10px;
+text-align: center;
+}
+
+body {
+    background-color: #e07a5f;
+}
+
+.box {
+    background-color: #f4f1de;
 }
