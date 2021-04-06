@@ -15,6 +15,7 @@ h1 {
 text-align: center;
 background-color: #f4f1de;
 border-bottom: 5px solid #3d405b;
+padding: 50px;
 }
 
 body {
@@ -24,8 +25,19 @@ body {
 .box {
     background-color: #f4f1de;
     border-bottom: 10px solid #3d405b;
+    padding: 350px;
+    box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.2);
+    text-align: center;
 }
 
 .box h2 {
-    padding: 350px;
+   margin: auto;
+}
+
+.buttons {
+    padding: 20px;
+    margin: 10px;
+    background-color: #f2cc8f;
+    border-bottom: 5px solid #3d405b;
+    box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.2);
 }
