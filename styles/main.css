@@ -13,6 +13,8 @@
 
 h1 {
 text-align: center;
+background-color: #f4f1de;
+border-bottom: 5px solid #3d405b;
 }
 
 body {
@@ -21,4 +23,9 @@ body {
 
 .box {
     background-color: #f4f1de;
+    border-bottom: 10px solid #3d405b;
+}
+
+.box h2 {
+    padding: 350px;
 }
