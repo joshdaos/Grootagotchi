@@ -17,11 +17,19 @@
 
     <h1>Grow your Grootagotchi Game!</h1>
     <section class="box">
-
+        
         <form>
-            <label for="name">User Name:</label>
-        <input type="text" id="name">
-        </form>
+            <label for="name">Pet Name:</label>
+        <input type="text" id="name" name="name"><br>
+        <input type="submit" id="submit" value="Submit">
+    </form>
+    <!-- Metrics -->
+    <div class="metrics">
+        <p id="age">Pet's Age: <progress class="nes-progress is-primary" value="5" max="10"></progress></p>
+        <p id="hunger">Hunger: <progress class="nes-progress is-success" value="5" max="10"></progress></p>
+        <p id="attention">Attention: <progress class="nes-progress is-warning" value="5" max="10"></progress></p>
+        <p id="sleep">Sleep: <progress class="nes-progress is-error" value="5" max="10"></progress></p>
+    </div>
         
         <div>
             <button>Start</button>
@@ -29,12 +37,14 @@
         <img src="https://image.shutterstock.com/image-vector/empty-plant-earthen-pot-cartoon-260nw-245022670.jpg" alt="circle" width="300px" height="300px">
         <p>Grow Seedling Groot to Baby Groot!</p>
         </div>
-
+        <!-- Buttons -->
         <div class="buttons">
-            <button>Water</button>
-            <button>Attention</button>
-            <button>Sleep</button>
+            <button id="water">Water</button>
+            <button id="attention">Attention</button>
+            <button id="sleep">Sleep</button>
         </div>
+
+
 
     <section>
 

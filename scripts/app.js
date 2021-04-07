@@ -2,7 +2,7 @@ console.log("Grootagatchi!")
  
 // Create a repo for your tomagotchi pet ~
 // make a commit after you finish each one of the following ~
-// Instatiate your Tomagotchi
+// Instatiate your Tomagotchi ~
 // Display a character of your choice on the screen to represent your pet ~
 // Display the following metrics for your pet:
 // Hunger (1-10 scale)
@@ -42,19 +42,42 @@ Brief overview
 -goal is just to keep groot alive as long as possible
 */
 
+// trying to swap pet name variable to be created as new object with props
+// const $pet = $("<input type='text' placeholder='Name your pet'><input type='submit' value='submit'>");
+// $(".box").append($pet);
+
+
+
 // 1. Step One 
-// build character in object 
+// build pet in object class
+// when pet name is added in submit input, the name will be created into this object class
 // stub it up
 
-class Tamagotchi {
-    constructor (name) {
-        this.name = name;
-        this.hunger = hunger;
-        this.attention = attention;
-        this.sleep = sleep;
+class Grootagotchi {
+    constructor (nameProp) {
+        this.name = nameProp;
+        this.age = 0;
+        this.hunger = 10;
+        this.attention = 10;
+        this.sleep = 10;
     }
+
+    // 2. Step Two
+    // display metrics of pet
+    // age
+    // hunger
+    // attention 
+    // sleep
+    // methods 
+    // generateAge(days) {
+    //     const $age = $("")
+    //     for(let i = 0; i < days)
+    // }
+    
+
+
 }
 
-const groot = new Tamagotchi(Groot);
+const groot = new Grootagotchi($pet);
 
 

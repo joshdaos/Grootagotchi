@@ -1,4 +1,5 @@
 /* main colors
+source - https://coolors.co/f4f1de-e07a5f-3d405b-81b29a-f2cc8f
 #E07A5F - Terra Cotta
 #F4F1DE - Eggshell
 #3d405b - Independence
@@ -41,3 +42,8 @@ body {
     border-bottom: 5px solid #3d405b;
     box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.2);
 }
+
+.metrics {
+    
+}
+
