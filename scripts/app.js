@@ -43,10 +43,6 @@ Brief overview
 // Morph your pet at certain ages.
 // Animate your pet across the screen while it's alive.
 
-// trying to swap pet name variable to be created as new object with props
-// const $pet = $("<input type='text' placeholder='Name your pet'><input type='submit' value='submit'>");
-// $(".box").append($pet);
-
 
 // 1. Step One 
 // build pet in object class
@@ -57,14 +53,6 @@ const groot = {
 name: "",
 age: 0,
 }
-
-// create a input that will log the name of the user 
-const name = function name () {
-
-}
-
-const $start = $('#name')
-$start.on()
 
 
 
@@ -91,7 +79,7 @@ const grootagotchi = {
     },
 
     reduceTime(){
-        grootagotchi.time--;
+        grootagotchi.time--; 
         if(grootagotchi.time <= 0) {
             groot.age++;
         }
@@ -100,37 +88,42 @@ const grootagotchi = {
 
 }
 grootagotchi.startTime();
-
 // create a start button that will function startTime
-$start 
-const start = function start(){
-    grootagotchi.startTime();
-}
+
+// have no clue what I'm doing but I'm trying to create a prompt for user to input a name 
+// tried reading jquery docs on .html() and .confirm()
+
+// const createName = $("Name your Grootagotchi:", "").confirm();
+//     $("#user-name").html() = createName;
+//     if (createName == null || createName.replace(/\s/g, '') == "") {
+//         createName = "Groot";
+//         $("#user-name").html() = createName;
+//     }
+
 
 
 // Step 3.
-// make buttons for metrics, lets sanity check first
+// make buttons for metrics, lets sanity check first, maybe make a create method later?
 
 // click water button functionality
-const $water = $('#water');
-const cWater = function cWater(event){
+
+const clickWater = function clickWater(event){
     console.log("clicked a water buttton")
 }
-$water.on('click water', cWater);
+$('#water').on('click', clickWater);
 
-// click play button
-const $play = $('#play');
-const cPlay = function cPlay(event){
+
+const clickPlay = function clickPlay(event){
     console.log("clicked a play buttton")
 }
-$play.on('click play', cPlay);
+$('#play').on('click', clickPlay);
 
-// click sleep button
-const $sleep = $('#sleep')
-const cSleep = function cSleep(event){
-    console.log("clicked a play buttton")
+// click sleep button, not working
+
+const clickSleep = function clickSleep(event){
+    console.log("clicked a sleep buttton")
 }
-$sleep.on('click sleep', cSleep);
+$('#sleep').on('click sleep', clickSleep);
 
 
 
