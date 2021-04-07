@@ -1,23 +1,5 @@
 console.log("Grootagatchi!")
  
-// Create a repo for your tomagotchi pet ~
-// make a commit after you finish each one of the following ~
-// Instatiate your Tomagotchi ~
-// Display a character of your choice on the screen to represent your pet ~
-// Display the following metrics for your pet:
-// Hunger (1-10 scale)
-// Sleepiness (1-10 scale)
-// Boredom (1-10 scale)
-// Age
-// Add buttons to the screen to feed your pet, turn off the lights, and play with your pet.
-// Add the ability to name your pet.
-// Style the page.
-// Increase your pet's age every x minutes
-// Increase your pet's Hunger, Sleepiness, and Bored metrics on an interval of your choosing.
-// You pet should die if Hunger, Boredom, or Sleepiness hits 10.
-// Morph your pet at certain ages.
-// Animate your pet across the screen while it's alive.
-
 /* MVP
 Brief overview
 -Goal is to evolve groot through some stages 
@@ -42,10 +24,28 @@ Brief overview
 -goal is just to keep groot alive as long as possible
 */
 
+
+// Create a repo for your tomagotchi pet ~
+// make a commit after you finish each one of the following ~
+// Instatiate your Tomagotchi ~
+// Display a character of your choice on the screen to represent your pet ~
+// Display the following metrics for your pet:
+// Hunger (1-10 scale)
+// Sleepiness (1-10 scale)
+// Boredom (1-10 scale)
+// Age (timer?)
+// Add buttons to the screen to feed your pet, turn off the lights, and play with your pet.
+// Add the ability to name your pet.
+// Style the page.
+// Increase your pet's age every x minutes
+// Increase your pet's Hunger, Sleepiness, and Bored metrics on an interval of your choosing.
+// You pet should die if Hunger, Boredom, or Sleepiness hits 10.
+// Morph your pet at certain ages.
+// Animate your pet across the screen while it's alive.
+
 // trying to swap pet name variable to be created as new object with props
 // const $pet = $("<input type='text' placeholder='Name your pet'><input type='submit' value='submit'>");
 // $(".box").append($pet);
-
 
 
 // 1. Step One 
@@ -53,31 +53,85 @@ Brief overview
 // when pet name is added in submit input, the name will be created into this object class
 // stub it up
 
-class Grootagotchi {
-    constructor (nameProp) {
-        this.name = nameProp;
-        this.age = 0;
-        this.hunger = 10;
-        this.attention = 10;
-        this.sleep = 10;
-    }
+const groot = {
+name: "",
+age: 0,
+}
 
-    // 2. Step Two
-    // display metrics of pet
-    // age
-    // hunger
-    // attention 
-    // sleep
-    // methods 
-    // generateAge(days) {
-    //     const $age = $("")
-    //     for(let i = 0; i < days)
-    // }
-    
-
+// create a input that will log the name of the user 
+const name = function name () {
 
 }
 
-const groot = new Grootagotchi($pet);
+const $start = $('#name')
+$start.on()
+
+
+
+// eliminated class object, too confusing for me still!
+const grootagotchi = {
+   // for metrics make sure to change back to 0 the limit is 10
+        hunger: 10, 
+        play: 10,
+        sleep: 10,
+        timer: null,
+        time: 30,
+    
+
+    // 2. Step Two
+    // display metrics of pet
+    // -age
+    // -hunger
+    // -attention 
+    // -sleep
+    
+    // build a timer for age as time goes down, groot's age grows by the second.
+    startTime(){
+        grootagotchi.timer = setInterval(grootagotchi.reduceTime, 1000);
+    },
+
+    reduceTime(){
+        grootagotchi.time--;
+        if(grootagotchi.time <= 0) {
+            groot.age++;
+        }
+    },
+
+
+}
+grootagotchi.startTime();
+
+// create a start button that will function startTime
+$start 
+const start = function start(){
+    grootagotchi.startTime();
+}
+
+
+// Step 3.
+// make buttons for metrics, lets sanity check first
+
+// click water button functionality
+const $water = $('#water');
+const cWater = function cWater(event){
+    console.log("clicked a water buttton")
+}
+$water.on('click water', cWater);
+
+// click play button
+const $play = $('#play');
+const cPlay = function cPlay(event){
+    console.log("clicked a play buttton")
+}
+$play.on('click play', cPlay);
+
+// click sleep button
+const $sleep = $('#sleep')
+const cSleep = function cSleep(event){
+    console.log("clicked a play buttton")
+}
+$sleep.on('click sleep', cSleep);
+
+
 
 

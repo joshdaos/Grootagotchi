@@ -17,3 +17,18 @@ He needs food, attention, and sleep!
 - Carefully manage him by consistently giving him food, attention, and sleep!
 
 
+# Game Logic:
+-
+
+# Languages Used:
+- HTML
+- CSS
+- JAVASCRIPT
+ 
+# Library: 
+- JQUERY
+
+# Demo:
+Click here to Play!
+file:///Users/joshuadaos/sei/projects/project-zero/index.html?name=josh
+
