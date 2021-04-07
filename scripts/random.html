@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>jQuery UI Effects - addClass demo</title>
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+<link rel="stylesheet" href="/resources/demos/style.css" />
+</head>
+<body>
+<form>
+<div>Your name:</div>
+<input name="enterName" id="enterName" type="text">
+<div style="margin-top:10px;" class="submit">
+<input value="submit" id="submit_this" type="button">
+</div>
+</form>
+<br>
+<div id="result"></div>
+<script>
+$(document).ready(function() {
+    var greeting = function(name) {
+            var name = $('#enterName').val();
+            name = 'Great to see you,' + ' ' + name;
+            console.log('Great to see you,' + '' + name);
+            $('#result').text(name);
+        };
+
+    $('#submit_this').click(function() {
+        greeting();
+        //prompt('Great to see you,' + '' + name);
+    });
+});
+</script>
+</body>
+</html>
