@@ -1,4 +1,4 @@
-console.log("Grootagatchi!")
+console.log("Welcome to Grootagatchi!")
  
 /* MVP
 Brief overview
@@ -50,29 +50,29 @@ Brief overview
 // stub it up
 
 const groot = {
-name: "",
-age: 0,
+    name: "",
+    age: 0,
+    hunger: 10, 
+    entertained: 10,
+    sleep: 10,
 }
+console.log(groot);
+// 2. Step Two
+// display metrics of pet
+// -age
+// -hunger
+// -attention 
+// -sleep
 
 
-
-// eliminated class object, too confusing for me still!
+// eliminated class object, too confusing for me 
+// grootagotchi game logic
 const grootagotchi = {
-   // for metrics make sure to change back to 0 the limit is 10
-        hunger: 10, 
-        play: 10,
-        sleep: 10,
         timer: null,
         time: 30,
-    
 
-    // 2. Step Two
-    // display metrics of pet
-    // -age
-    // -hunger
-    // -attention 
-    // -sleep
-    
+
+    // create methods for metrics of groot
     // built a timer for age as time goes down, groot's age grows by the second.
     // need to make this timer visible on screen
 
@@ -88,11 +88,29 @@ const grootagotchi = {
             $("#age").text(`${groot.age} days old`);
          }
      },
+
+    //  create methods (connect tp grow btn) that will minus the obj groot's props, loops?
+
     // create a method for hunger that minuses the hunger bar 
+    increaseHunger(){
+        $("#submit-name").click(function (){
+           return groot.hunger--;
+        });
+    },
 
-    imHungry(){
+    // create method that decreases the entertained bar
+    decreaseFun(){
+        $("#submit-name").click(function (){
+            return groot.entertained--;
+         });
+    },
 
-    }
+    //create a method that decreases the rest bar
+    decreaseSleep(){
+        $("#submit-name").click(function (){
+            return groot.sleep--;
+         });
+    },
 
 }
 // when clicked start timer for age growth and submit pet's name
@@ -126,10 +144,10 @@ $("#submit-name").click(function (){
 
 // click functionality
 
-const clickWater = function clickWater(event){
-    console.log("clicked a water buttton")
-}
-$('#water').on('click', clickWater);
+// const clickWater = function clickWater(event){
+//     console.log("clicked a water buttton")
+// }
+// $('#water').on('click', clickWater);
 
 
 const clickPlay = function clickPlay(event){
