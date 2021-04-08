@@ -29,6 +29,6 @@ He needs food, attention, and sleep!
 - JQUERY
 
 # Demo:
-Click here to Play!
+Click <a>here</a> to Play! 
 file:///Users/joshuadaos/sei/projects/project-zero/index.html?name=josh
 

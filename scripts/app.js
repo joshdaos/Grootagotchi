@@ -35,8 +35,8 @@ Brief overview
 // Boredom (1-10 scale)
 // Age (timer?)
 // Add buttons to the screen to feed your pet, turn off the lights, and play with your pet.
-// Add the ability to name your pet.
-// Style the page.
+// Add the ability to name your pet.~
+// Style the page.~ (somewhat)
 // Increase your pet's age every x minutes ~
 // Increase your pet's Hunger, Sleepiness, and Bored metrics on an interval of your choosing.
 // You pet should die if Hunger, Boredom, or Sleepiness hits 10.
@@ -83,7 +83,9 @@ const grootagotchi = {
     reduceTime(){
         grootagotchi.time--; 
         if(grootagotchi.time <= 0) {
-            groot.age++;
+           console.log(groot.age++);
+           grootagotchi.time = 30; //30 seconds?
+           $("#age").text(`${groot.age} days old`);
         }
     },
 
@@ -114,7 +116,7 @@ grootagotchi.startTime();
 // Step 3.
 // make buttons for metrics, lets sanity check first, maybe make a create method later?
 
-// click water button functionality
+// click functionality
 
 const clickWater = function clickWater(event){
     console.log("clicked a water buttton")
@@ -127,7 +129,6 @@ const clickPlay = function clickPlay(event){
 }
 $('#play').on('click', clickPlay);
 
-// click sleep button, not working
 
 const clickSleep = function clickSleep(event){
     console.log("clicked a sleep buttton")
