@@ -33,9 +33,9 @@ Brief overview
 // Hunger (1-10 scale)
 // Sleepiness (1-10 scale)
 // Boredom (1-10 scale)
-// Age (timer?)
+// Age (timer?) ~
 // Add buttons to the screen to feed your pet, turn off the lights, and play with your pet.
-// Add the ability to name your pet.~
+// Add the ability to name your pet. ~
 // Style the page.~ (somewhat)
 // Increase your pet's age every x minutes ~
 // Increase your pet's Hunger, Sleepiness, and Bored metrics on an interval of your choosing.
@@ -45,10 +45,10 @@ Brief overview
 
 
 // 1. Step One 
-// build pet in object class
-// when pet name is added in submit input, the name will be created into this object class
+// build pet obj w/ props, build obj that consist of game logic
 // stub it up
 
+// REMINDER SET METRICS TO ZERO THEN ADJUST METHODS TO INCREASE TO 10
 const groot = {
     name: "",
     age: 0,
@@ -89,7 +89,8 @@ const grootagotchi = {
          }
      },
 
-    //  create methods (connect tp grow btn) that will minus the obj groot's props, loops?
+    //  create methods (connect tp grow btn) that will minus the obj groot's props,
+    // use loops or creat interval timers for them to decrease bar when time increases
 
     // create a method for hunger that minuses the hunger bar 
     increaseHunger(){
@@ -111,6 +112,17 @@ const grootagotchi = {
             return groot.sleep--;
          });
     },
+
+    // create a method that will evolve seedling groot to baby groot 
+    // not working, also need to fix timer, too slow
+    evolveGroot(){
+        if(groot.age === 5) {
+            $("#groot-one").removeAttr("src");
+            $("groot-one").attr("src", "https://easydrawingguides.com/wp-content/uploads/2019/03/Baby-Groot-10.png")
+        }
+    },
+
+
 
 }
 // when clicked start timer for age growth and submit pet's name
