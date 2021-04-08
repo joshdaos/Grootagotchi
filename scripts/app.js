@@ -57,50 +57,59 @@ const groot = {
     sleep: 10,
 }
 console.log(groot);
-// 2. Step Two
-// display metrics of pet
-// -age
-// -hunger
-// -attention 
-// -sleep
 
 
 // eliminated class object, too confusing for me 
 // grootagotchi game logic
 const grootagotchi = {
-        timer: null,
-        time: 30,
-
-
+    timer: null,
+    time: 10,
+    
+    
+    // 2. Step Two
+    // display metrics of pet
+    // -age
+    // -hunger
+    // -attention 
+    // -sleep
     // create methods for metrics of groot
     // built a timer for age as time goes down, groot's age grows by the second.
     // need to make this timer visible on screen
 
-     startTime(){
-         grootagotchi.timer = setInterval(grootagotchi.reduceTime, 1000);
-     },
-
-     reduceTime(){
-         grootagotchi.time--; 
-         if(grootagotchi.time <= 0) {
-            console.log(groot.age++);
-            grootagotchi.time = 30; //30 seconds?
-            $("#age").text(`${groot.age} days old`);
-         }
-     },
-
-    //  create methods (connect tp grow btn) that will minus the obj groot's props,
-    // use loops or creat interval timers for them to decrease bar when time increases
-
-    // create a method for hunger that minuses the hunger bar 
-    increaseHunger(){
-        $("#submit-name").click(function (){
-           return groot.hunger--;
-        });
+    
+    reduceTime(){
+        grootagotchi.time--; 
+        if(grootagotchi.time === 0) {
+            groot.age++;
+            grootagotchi.time = 10; //10 seconds?
+            $("#age").text(`Age: ${groot.age} days old`);
+        }
+    },
+    
+    startTime(){
+       setInterval(grootagotchi.reduceTime, 3000);
     },
 
+    //  create methods (connect to grow btn) that will minus the obj groot's props,
+    // use loops or creat interval timers for them to decrease bar when time increases
+
+    //create a method for hunger/timer that minuses the hunger bar 
+    decreaseHunger(){
+        grootagotchi.time--; 
+        if(grootagotchi.time === 0) {
+            groot.hunger--;
+            grootagotchi.time = 10; //10 seconds?
+            $("#hunger").text(`Hunger: ${groot.hunger}`);
+        }
+    },
+    
+    hungerTimer(){
+        setInterval(grootagotchi.decreaseHunger, 1000);
+    },
+
+
     // create method that decreases the entertained bar
-    decreaseFun(){
+    decreaseEntertained(){
         $("#submit-name").click(function (){
             return groot.entertained--;
          });
@@ -129,23 +138,29 @@ const grootagotchi = {
 $("#submit-name").click(function (){
     grootagotchi.startTime();
 });
+// click hunger bar 
+ $("#submit-name").click(function (){
+    grootagotchi.hungerTimer();
+});
+
+
+
 
 // create a start button that will function startTime
 
 // Created a function that logs the name of the grootagotchi
 // Thanks to Maiki she helped me get rid of the form tag that caused me to refresh page when I would submit a name
 
-    const createName = function(){
+const createName = function(){  //realized that it kept logging [object, object] when I would log 
+    let seedling = $("#input-name").val();  // .val pulls the value in the input, ref https://api.jquery.com/val/
+    seedling = "Hello," + " " + seedling + " Groot";
+    console.log("Hello," + "" + seedling + " Groot");
+    $("#output-name").text(seedling); // .text() logs the text like prompt on the html
+};
 
-            let seedling = $("#input-name").val();
-            seedling = "Hello," + " " + seedling + " Groot";
-            console.log("Hello," + "" + seedling + " Groot");
-            $("#output-name").text(seedling);
-        };
-
-    $("#submit-name").click(function() {
-        createName();
-    });
+$("#submit-name").click(function() {
+createName();
+});
     
 
 
@@ -156,10 +171,10 @@ $("#submit-name").click(function (){
 
 // click functionality
 
-// const clickWater = function clickWater(event){
-//     console.log("clicked a water buttton")
-// }
-// $('#water').on('click', clickWater);
+const clickWater = function clickWater(event){
+     console.log("clicked a water buttton")
+}
+$('#water').on('click', clickWater);
 
 
 const clickPlay = function clickPlay(event){
