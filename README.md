@@ -28,6 +28,10 @@ He needs food, attention, and sleep!
 # Library: 
 - JQUERY
 
+# Wireframe:
+- https://joshdaos986755.invisionapp.com/freehand/Groot-Tamagotchi-7Iue3vi9Y
+
+
 # Demo:
 Click <a>here</a> to Play! 
 file:///Users/joshuadaos/sei/projects/project-zero/index.html?name=josh

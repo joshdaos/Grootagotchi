@@ -64,7 +64,10 @@ console.log(groot);
 const grootagotchi = {
     timer: null,
     time: 10,
-    
+    hungertime: 10,
+    entertainedtime: 10,
+    resttime: 10,
+
     
     // 2. Step Two
     // display metrics of pet
@@ -77,7 +80,7 @@ const grootagotchi = {
     // need to make this timer visible on screen
 
     
-    reduceTime(){
+    increaseAge(){
         grootagotchi.time--; 
         if(grootagotchi.time === 0) {
             groot.age++;
@@ -86,8 +89,8 @@ const grootagotchi = {
         }
     },
     
-    startTime(){
-       setInterval(grootagotchi.reduceTime, 3000);
+    ageTimer(){
+       setInterval(grootagotchi.increaseAge, 1000);
     },
 
     //  create methods (connect to grow btn) that will minus the obj groot's props,
@@ -95,46 +98,46 @@ const grootagotchi = {
 
     //create a method for hunger/timer that minuses the hunger bar 
     decreaseHunger(){
-        grootagotchi.time--; 
-        if(grootagotchi.time === 0) {
+        grootagotchi.hungertime--; 
+        if(grootagotchi.hungertime === 0) {
             groot.hunger--;
-            grootagotchi.time = 10; //10 seconds?
+            grootagotchi.hungertime = 10; //10 seconds?
             $("#hunger").text(`Hunger: ${groot.hunger}`);
         }
     },
     
     hungerTimer(){
-        setInterval(grootagotchi.decreaseHunger, 3000);
+        setInterval(grootagotchi.decreaseHunger, 1000);
     },
 
 
     // create method/timer that decreases the entertained bar
     decreaseEntertained(){
-        grootagotchi.time--; 
-        if(grootagotchi.time === 0) {
+        grootagotchi.entertainedtime--; 
+        if(grootagotchi.entertainedtime === 0) {
             groot.entertained--;
-            grootagotchi.time = 10; //10 seconds?
+            grootagotchi.entertainedtime = 10; //10 seconds?
             $("#entertained").text(`Entertained: ${groot.entertained}`);
         }
     },
     
     entertainedTimer(){
-        setInterval(grootagotchi.decreaseEntertained, 3000);
+        setInterval(grootagotchi.decreaseEntertained, 1000);
     },
 
 
     //create a method that decreases the rest bar
     decreaseRest(){
-        grootagotchi.time--; 
-        if(grootagotchi.time === 0) {
+        grootagotchi.resttime--; 
+        if(grootagotchi.resttime === 0) {
             groot.rest--;
-            grootagotchi.time = 10; //10 seconds?
-            $("#rest").text(`Rest: ${groot.entertained}`);
+            grootagotchi.resttime = 10; //10 seconds?
+            $("#rest").text(`Rest: ${groot.rest}`);
         }
     },
     
     restTimer(){
-        setInterval(grootagotchi.decreaseRest, 3000);
+        setInterval(grootagotchi.decreaseRest, 1000);
     },
 
     // create a method that will evolve seedling groot to baby groot 
@@ -150,7 +153,7 @@ const grootagotchi = {
 }
 // when clicked start timer for age growth and submit pet's name
 $("#submit-name").click(function (){
-    grootagotchi.startTime();
+    grootagotchi.ageTimer();
 });
 // click hunger bar 
  $("#submit-name").click(function (){
