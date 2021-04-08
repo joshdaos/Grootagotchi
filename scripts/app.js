@@ -76,22 +76,30 @@ const grootagotchi = {
     // built a timer for age as time goes down, groot's age grows by the second.
     // need to make this timer visible on screen
 
-    startTime(){
-        grootagotchi.timer = setInterval(grootagotchi.reduceTime, 1000);
-    },
+     startTime(){
+         grootagotchi.timer = setInterval(grootagotchi.reduceTime, 1000);
+     },
 
-    reduceTime(){
-        grootagotchi.time--; 
-        if(grootagotchi.time <= 0) {
-           console.log(groot.age++);
-           grootagotchi.time = 30; //30 seconds?
-           $("#age").text(`${groot.age} days old`);
-        }
-    },
+     reduceTime(){
+         grootagotchi.time--; 
+         if(grootagotchi.time <= 0) {
+            console.log(groot.age++);
+            grootagotchi.time = 30; //30 seconds?
+            $("#age").text(`${groot.age} days old`);
+         }
+     },
+    // create a method for hunger that minuses the hunger bar 
 
+    imHungry(){
+
+    }
 
 }
-grootagotchi.startTime();
+// when clicked start timer for age growth and submit pet's name
+$("#submit-name").click(function (){
+    grootagotchi.startTime();
+});
+
 // create a start button that will function startTime
 
 // Created a function that logs the name of the grootagotchi
