@@ -54,7 +54,7 @@ const groot = {
     age: 0,
     hunger: 10, 
     entertained: 10,
-    sleep: 10,
+    rest: 10,
 }
 console.log(groot);
 
@@ -104,30 +104,44 @@ const grootagotchi = {
     },
     
     hungerTimer(){
-        setInterval(grootagotchi.decreaseHunger, 1000);
+        setInterval(grootagotchi.decreaseHunger, 3000);
     },
 
 
-    // create method that decreases the entertained bar
+    // create method/timer that decreases the entertained bar
     decreaseEntertained(){
-        $("#submit-name").click(function (){
-            return groot.entertained--;
-         });
+        grootagotchi.time--; 
+        if(grootagotchi.time === 0) {
+            groot.entertained--;
+            grootagotchi.time = 10; //10 seconds?
+            $("#entertained").text(`Entertained: ${groot.entertained}`);
+        }
     },
+    
+    entertainedTimer(){
+        setInterval(grootagotchi.decreaseEntertained, 3000);
+    },
+
 
     //create a method that decreases the rest bar
-    decreaseSleep(){
-        $("#submit-name").click(function (){
-            return groot.sleep--;
-         });
+    decreaseRest(){
+        grootagotchi.time--; 
+        if(grootagotchi.time === 0) {
+            groot.rest--;
+            grootagotchi.time = 10; //10 seconds?
+            $("#rest").text(`Rest: ${groot.entertained}`);
+        }
+    },
+    
+    restTimer(){
+        setInterval(grootagotchi.decreaseRest, 3000);
     },
 
     // create a method that will evolve seedling groot to baby groot 
     // not working, also need to fix timer, too slow
     evolveGroot(){
-        if(groot.age === 5) {
-            $("#groot-one").removeAttr("src");
-            $("groot-one").attr("src", "https://easydrawingguides.com/wp-content/uploads/2019/03/Baby-Groot-10.png")
+        if(groot.age == 2) {
+            $("imgs").attr("src", "https://easydrawingguides.com/wp-content/uploads/2019/03/Baby-Groot-10.png")
         }
     },
 
@@ -142,9 +156,14 @@ $("#submit-name").click(function (){
  $("#submit-name").click(function (){
     grootagotchi.hungerTimer();
 });
-
-
-
+// click entertained bar
+$("#submit-name").click(function (){
+    grootagotchi.entertainedTimer();
+});
+// click rest bar
+$("#submit-name").click(function (){
+    grootagotchi.restTimer();
+});
 
 // create a start button that will function startTime
 
