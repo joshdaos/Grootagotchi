@@ -90,7 +90,7 @@ const grootagotchi = {
     },
     
     ageTimer(){
-       setInterval(grootagotchi.increaseAge, 1000);
+       setInterval(grootagotchi.increaseAge, 400);
     },
 
     //  create methods (connect to grow btn) that will minus the obj groot's props,
@@ -107,7 +107,7 @@ const grootagotchi = {
     },
     
     hungerTimer(){
-        setInterval(grootagotchi.decreaseHunger, 1000);
+        setInterval(grootagotchi.decreaseHunger, 500);
     },
 
 
@@ -122,7 +122,7 @@ const grootagotchi = {
     },
     
     entertainedTimer(){
-        setInterval(grootagotchi.decreaseEntertained, 1000);
+        setInterval(grootagotchi.decreaseEntertained, 500);
     },
 
 
@@ -137,16 +137,28 @@ const grootagotchi = {
     },
     
     restTimer(){
-        setInterval(grootagotchi.decreaseRest, 1000);
+        setInterval(grootagotchi.decreaseRest, 500);
     },
 
     // create a method that will evolve seedling groot to baby groot 
     // not working, also need to fix timer, too slow
     evolveGroot(){
-        if(groot.age == 2) {
-            $("img").attr("src", "https://easydrawingguides.com/wp-content/uploads/2019/03/Baby-Groot-10.png")
-        }
+        if(groot.age > 2) {
+            $("img").remove("src");
+            $("img").attr("src", "https://easydrawingguides.com/wp-content/uploads/2019/03/Baby-Groot-10.png");
+        };
     },
+
+    // end the game with a prompt, create a restart button?
+    endGame(){
+        if(groot.hunger || groot.entertained || groot.rest === 0){
+            $(".box").html("<h1>GAME OVER!</h1>");
+            $("section").html("<h1>GAME OVER!</h1>");
+            $(".box").text("<h1>GAME OVER!</h1>");
+            $("section").text("<h1>GAME OVER!</h1>");
+
+        }
+    }
 
 
 
@@ -192,6 +204,7 @@ createName();
 // make buttons for metrics, lets sanity check first, maybe make a create method later?
 // buttons to increase by one in metrics 
 
+// water button
 const clickWater = function clickWater(event){
      console.log("clicked a water buttton");
      if(groot.hunger <= 10){
@@ -200,7 +213,7 @@ const clickWater = function clickWater(event){
 }
 $('#water').on('click', clickWater);
 
-
+// play button 
 const clickPlay = function clickPlay(event){
     console.log("clicked a play buttton");
     if(groot.entertained <= 10){
@@ -209,7 +222,8 @@ const clickPlay = function clickPlay(event){
 }
 $('#play').on('click', clickPlay);
 
-
+// sleep button
+// button should also turn off lights (change color of background?)
 const clickSleep = function clickSleep(event){
     console.log("clicked a sleep buttton");
     if(groot.rest <= 10){
@@ -217,7 +231,6 @@ const clickSleep = function clickSleep(event){
     }
 }
 $('#sleep').on('click sleep', clickSleep);
-
 
 
 

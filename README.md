@@ -18,7 +18,11 @@ He needs food, attention, and sleep!
 
 
 # Game Logic:
--
+- Type in input your groot pet's name
+- Grow button starts the game also submits your user name
+- Water button increases hunger bar
+- Play button increases entertained bar
+- Sleep button increases rest bar
 
 # Languages Used:
 - HTML
@@ -33,6 +37,6 @@ He needs food, attention, and sleep!
 
 
 # Demo:
-Click <a>here</a> to Play! 
-file:///Users/joshuadaos/sei/projects/project-zero/index.html?name=josh
+Click below to Play! 
+- file:///Users/joshuadaos/sei/projects/project-zero/index.html
 

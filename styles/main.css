@@ -44,6 +44,30 @@ body {
 }
 
 .metrics {
-    
+    background-color: #f2cc8f;
+    border-bottom: 5px solid #3d405b;
+    box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.2);
 }
+
+.input-box {
+
+}
+
+img {
+
+}
+
+
+#water {
+    margin: 15px;
+}
+
+#play {
+    margin: 15px;
+}
+
+#sleep {
+    margin: 15px;
+}
+
 
