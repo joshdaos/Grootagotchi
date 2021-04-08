@@ -102,7 +102,7 @@ const grootagotchi = {
         if(grootagotchi.hungertime === 0) {
             groot.hunger--;
             grootagotchi.hungertime = 10; //10 seconds?
-            $("#hunger").text(`Hunger: ${groot.hunger}`);
+            $("#hunger").text(`Hunger: ${groot.hunger}/10`);
         }
     },
     
@@ -117,7 +117,7 @@ const grootagotchi = {
         if(grootagotchi.entertainedtime === 0) {
             groot.entertained--;
             grootagotchi.entertainedtime = 10; //10 seconds?
-            $("#entertained").text(`Entertained: ${groot.entertained}`);
+            $("#entertained").text(`Entertained: ${groot.entertained}/10`);
         }
     },
     
@@ -132,7 +132,7 @@ const grootagotchi = {
         if(grootagotchi.resttime === 0) {
             groot.rest--;
             grootagotchi.resttime = 10; //10 seconds?
-            $("#rest").text(`Rest: ${groot.rest}`);
+            $("#rest").text(`Rest: ${groot.rest}/10`);
         }
     },
     
@@ -144,7 +144,7 @@ const grootagotchi = {
     // not working, also need to fix timer, too slow
     evolveGroot(){
         if(groot.age == 2) {
-            $("imgs").attr("src", "https://easydrawingguides.com/wp-content/uploads/2019/03/Baby-Groot-10.png")
+            $("img").attr("src", "https://easydrawingguides.com/wp-content/uploads/2019/03/Baby-Groot-10.png")
         }
     },
 
@@ -190,23 +190,25 @@ createName();
 
 // Step 3.
 // make buttons for metrics, lets sanity check first, maybe make a create method later?
-
-// click functionality
+// buttons to increase by one in metrics 
 
 const clickWater = function clickWater(event){
-     console.log("clicked a water buttton")
+     console.log("clicked a water buttton");
+     groot.hunger++;
 }
 $('#water').on('click', clickWater);
 
 
 const clickPlay = function clickPlay(event){
-    console.log("clicked a play buttton")
+    console.log("clicked a play buttton");
+    groot.entertained;
 }
 $('#play').on('click', clickPlay);
 
 
 const clickSleep = function clickSleep(event){
-    console.log("clicked a sleep buttton")
+    console.log("clicked a sleep buttton");
+    groot.rest++;
 }
 $('#sleep').on('click sleep', clickSleep);
 
