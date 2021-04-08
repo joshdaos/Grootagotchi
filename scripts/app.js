@@ -73,7 +73,9 @@ const grootagotchi = {
     // -attention 
     // -sleep
     
-    // build a timer for age as time goes down, groot's age grows by the second.
+    // built a timer for age as time goes down, groot's age grows by the second.
+    // need to make this timer visible on screen
+
     startTime(){
         grootagotchi.timer = setInterval(grootagotchi.reduceTime, 1000);
     },
@@ -90,24 +92,14 @@ const grootagotchi = {
 grootagotchi.startTime();
 // create a start button that will function startTime
 
-// have no clue what I'm doing but I'm trying to create a prompt for user to input a name 
-// tried reading jquery docs on .html() and .confirm()
+// Created a function that logs the name of the grootagotchi
+// Thanks to Maiki she helped me get rid of the form tag that caused me to refresh page when I would submit a name
 
-// const createName = $("Name your Grootagotchi:", "").confirm();
-//     $("#user-name").html() = createName;
-//     if (createName == null || createName.replace(/\s/g, '') == "") {
-//         createName = "Groot";
-//         $("#user-name").html() = createName;
-//     }
+    const createName = function(){
 
-// source I used https://api.jquery.com/ready/
-// not working still need help 
-$(document).ready(function(){
-    const createName = function(seedling){
-
-            const seedling = $("#input-name").val();
-            seedling = "Hello Groot seedling," + " " + seedling;
-            console.log("Hello Groot seedling," + "" + seedling);
+            let seedling = $("#input-name").val();
+            seedling = "Hello," + " " + seedling + " Groot";
+            console.log("Hello," + "" + seedling + " Groot");
             $("#output-name").text(seedling);
         };
 
@@ -115,7 +107,7 @@ $(document).ready(function(){
         createName();
     });
     
-});
+
 
 
 
