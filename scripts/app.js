@@ -30,15 +30,15 @@ Brief overview
 // Instatiate your Tomagotchi ~
 // Display a character of your choice on the screen to represent your pet ~
 // Display the following metrics for your pet:
-// Hunger (1-10 scale)
-// Sleepiness (1-10 scale)
-// Boredom (1-10 scale)
+// Hunger (1-10 scale)~
+// Sleepiness (1-10 scale)~
+// Boredom (1-10 scale)~
 // Age (timer?) ~
 // Add buttons to the screen to feed your pet, turn off the lights, and play with your pet.
 // Add the ability to name your pet. ~
 // Style the page.~ (somewhat)
 // Increase your pet's age every x minutes ~
-// Increase your pet's Hunger, Sleepiness, and Bored metrics on an interval of your choosing.
+// Increase your pet's Hunger, Sleepiness, and Bored metrics on an interval of your choosing. ~
 // You pet should die if Hunger, Boredom, or Sleepiness hits 10.
 // Morph your pet at certain ages.
 // Animate your pet across the screen while it's alive.
@@ -194,21 +194,27 @@ createName();
 
 const clickWater = function clickWater(event){
      console.log("clicked a water buttton");
-     groot.hunger++;
+     if(groot.hunger <= 10){
+         groot.hunger++;
+     }
 }
 $('#water').on('click', clickWater);
 
 
 const clickPlay = function clickPlay(event){
     console.log("clicked a play buttton");
-    groot.entertained;
+    if(groot.entertained <= 10){
+        groot.entertained;
+    }
 }
 $('#play').on('click', clickPlay);
 
 
 const clickSleep = function clickSleep(event){
     console.log("clicked a sleep buttton");
-    groot.rest++;
+    if(groot.rest <= 10){
+        groot.rest++;
+    }
 }
 $('#sleep').on('click sleep', clickSleep);
 
