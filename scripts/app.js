@@ -76,9 +76,11 @@ const grootagotchi = {
     // -attention 
     // -sleep
     // create methods for metrics of groot
+
     // built a timer for age as time goes down, groot's age grows by the second.
     // need to make this timer visible on screen
-
+    // age timer determines the morph at certain age
+    // when game ends is measured by the age 
     
     increaseAge(){
         grootagotchi.time--; 
@@ -106,6 +108,7 @@ const grootagotchi = {
         if(grootagotchi.hungertime === 0) {
             groot.hunger--;
             grootagotchi.endGame();
+            grootagotchi.sayPrompts();
             grootagotchi.hungertime = 10; //10 seconds?
             $("#hunger").text(`Hunger: ${groot.hunger}/10`);
         }
@@ -122,6 +125,7 @@ const grootagotchi = {
         if(grootagotchi.entertainedtime === 0) {
             groot.entertained--;
             grootagotchi.endGame();
+            grootagotchi.sayPrompts();
             grootagotchi.entertainedtime = 10; //10 seconds?
             $("#entertained").text(`Entertained: ${groot.entertained}/10`);
         }
@@ -138,6 +142,7 @@ const grootagotchi = {
         if(grootagotchi.resttime === 0) {
             groot.rest--;
             grootagotchi.endGame();
+            grootagotchi.sayPrompts();
             grootagotchi.resttime = 10; //10 seconds?
             $("#rest").text(`Rest: ${groot.rest}/10`);
         }
@@ -178,8 +183,9 @@ const grootagotchi = {
         }  
     },
 
+    //Step 5 WIN/LOSE
     // end the game with a prompt
-    // currently needs work 
+    // saying OR
     endGame(){
         if(groot.hunger === 0 || groot.entertained === 0 || groot.rest === 0){
             $("section").text("YOUR GROOT DIED! refresh page to restart!");
@@ -193,10 +199,19 @@ const grootagotchi = {
         }
     },
     
+    //Step 6 ANIMATE
+    //animate pet across screen 
 
 
+
+
+    // Step 7 PROMPT WARNINGS
     //create warning prompts for pet, when metric are low
-    // sayPrompts(){}
+    sayPrompts(){
+        if(groot.hunger < 3 || groot.entertained < 3 || groot.rest < 3){
+            $("#warning").text("Your groot is going to die!");
+        }
+    }
 
 }
 // when clicked start timer for age growth and submit pet's name
