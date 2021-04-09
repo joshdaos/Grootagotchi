@@ -59,7 +59,8 @@ img {
 
 
 #water {
-    margin: 15px;
+    float: left;
+    margin-left: 0px 0px 0px 15px;
 }
 
 #play {
@@ -67,7 +68,8 @@ img {
 }
 
 #sleep {
-    margin: 15px;
+    float: right;
+    margin-right: 0px 0px 0px 15px;
 }
 
 

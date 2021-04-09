@@ -69,7 +69,7 @@ const grootagotchi = {
     resttime: 10,
 
     
-    // 2. Step Two
+    // 2. Step Two 
     // display metrics of pet
     // -age
     // -hunger
@@ -84,7 +84,7 @@ const grootagotchi = {
         grootagotchi.time--; 
         if(grootagotchi.time === 0) {
             groot.age++;
-            grootagotchi.evolveGroot(); //call the function?
+            grootagotchi.evolveGroot(); //calling evolve
             grootagotchi.time = 10; //10 seconds?
             $("#age").text(`Age: ${groot.age} days old`);
         }
@@ -144,26 +144,33 @@ const grootagotchi = {
         setInterval(grootagotchi.decreaseRest, 500);
     },
 
-
+    //Step 4 
     // create a method that will evolve seedling groot to baby groot 
     // once groot's age hits 10 days then he will become baby groot
     // Maiki helped me call the evolve groot within all metric timers 
     
     evolveGroot(){
-        if(groot.age > 10) {
+        if(groot.age > 9) {
             $("img").attr("src", "https://easydrawingguides.com/wp-content/uploads/2019/03/Baby-Groot-10.png");
-        };
+            $("h2").text("Baby Groot");
+        } else if(groot.age > 15) {
+            $("img").attr("src", "https://www.pngfind.com/pngs/m/657-6571499_groot-guardians-of-the-galaxy-cartoon-hd-png.png");
+            $("h2").text("Kid Groot");
+        } // "else if" isn't running for some reason
     },
 
-    // end the game with a prompt, create a restart button?
+    // end the game with a prompt
     // currently needs work 
     endGame(){
         if(groot.hunger === 0 || groot.entertained === 0 || groot.rest === 0){
             $("section").text("YOUR GROOT DIED! refresh page to restart!");
         }
     }
+    
+    //create warning prompts for pet, when metric are low
+    // sayPrompts(){
 
-
+    // }
 
 }
 // when clicked start timer for age growth and submit pet's name
@@ -183,6 +190,8 @@ $("#submit-name").click(function (){
     grootagotchi.restTimer();
 });
 
+
+// Step 1 1/2
 // create a start button that will function startTime
 // Created a function that logs the name of the grootagotchi
 // Thanks to Maiki she helped me get rid of the form tag that caused me to refresh page when I would submit a name
@@ -209,9 +218,9 @@ createName();
 // water button
 const clickWater = function clickWater(event){
      console.log("clicked a water buttton");
-     if(groot.hunger <= 10){
-         groot.hunger++;
-         $("#hunger").text(`Hunger: ${groot.hunger}/10`);
+     if(groot.hunger <= 9){
+         groot.hunger++;  //adds 1 hunger to the hunger metric
+         $("#hunger").text(`Hunger: ${groot.hunger}/10`); //updates the current hunger bar, cuts out lag time
      }
 }
 $('#water').on('click', clickWater);
@@ -219,8 +228,8 @@ $('#water').on('click', clickWater);
 // play button 
 const clickPlay = function clickPlay(event){
     console.log("clicked a play buttton");
-    if(groot.entertained <= 10){
-        groot.entertained++;
+    if(groot.entertained <= 9){
+        groot.entertained++; //adds 1 entertained to the entertained metric
         $("#entertained").text(`Entertained: ${groot.entertained}/10`);
     }
 }
@@ -230,8 +239,8 @@ $('#play').on('click', clickPlay);
 // button should also turn off lights (change color of background?)
 const clickSleep = function clickSleep(event){
     console.log("clicked a sleep buttton");
-    if(groot.rest <= 10){
-        groot.rest++;
+    if(groot.rest <= 9){
+        groot.rest++; //adds 1 rest to rest metric
         $("#rest").text(`Rest: ${groot.rest}/10`);
     }
 }
