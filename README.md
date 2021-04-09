@@ -1,20 +1,20 @@
  GROOTAGOTCHI PROJECT ZERO - Josh Daos
 
+<img src="/Users/joshuadaos/Desktop/Screen Shot 2021-04-08 at 11.28.20 PM.png">
+
 ## Welcome to Grootagotchi
 
 - What we have here is a Tamagotchi game, The Pet is named "Groot".
-Right now he is still a seedling so we need to make him grow.
-Water him daily to see him grow! 
-Your goal is to gorw him to baby Groot and not let him die.
+Right now your Groot is still a seedling so we need to make grow it.
+Water your Groot daily to see it grow! 
+Your goal is to care for your Groot daily and not it die.
 
-- Within a timeframe of consistently watering him he'll evolve into Baby Groot!
-If we don't tend to him he'll eventually die from lack of hunger.
+- Within a timeframe of consistently caring for your Groot will evolve into Baby Groot! etc.
+If we don't tend to your Groot, it will eventually die.
+Your Groot needs food, attention, and sleep!
 
-- Once he is sprouted he'll become baby groot!
-Now that he is sprouted he'll need more than just water..
-He needs food, attention, and sleep!
+- To see your Groot morph through stages, carefully manage him by consistently giving him food, attention, and sleep!
 
-- Carefully manage him by consistently giving him food, attention, and sleep!
 
 
 # Game Logic:
@@ -23,6 +23,7 @@ He needs food, attention, and sleep!
 - Water button increases hunger bar
 - Play button increases entertained bar
 - Sleep button increases rest bar
+- Maintenance your Groot through the days
 
 # Languages Used:
 - HTML

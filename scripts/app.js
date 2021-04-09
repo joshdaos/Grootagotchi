@@ -211,7 +211,7 @@ const grootagotchi = {
         if(groot.hunger < 3 || groot.entertained < 3 || groot.rest < 3){
             $("#warning").text("Your groot is going to die!");
         }
-    }
+    },
 
 }
 // when clicked start timer for age growth and submit pet's name
