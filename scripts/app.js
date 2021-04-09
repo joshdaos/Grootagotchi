@@ -156,19 +156,19 @@ const grootagotchi = {
     // create a method that will evolve seedling groot to baby groot 
     // once groot's age hits 10 days then he will become baby groot
     // Maiki helped me call the evolve groot within all metric timers 
-    
+    // https://easydrawingguides.com/wp-content/uploads/2019/03/Baby-Groot-10.png
     evolveSeed(){
         if(groot.age > 9) {
-            $("img").attr("src", "https://easydrawingguides.com/wp-content/uploads/2019/03/Baby-Groot-10.png");
+            $("img").attr("src", "https://i.pinimg.com/originals/b9/e8/92/b9e892f82040b93bd4660dc1a834b544.gif");
             $("h2").text("Baby Groot");
             $("h3").text("i am groot..");
          } 
     },
     // originally created a "else if" statement but it didn't work so i'm guessing it exits the code block after first "if".
-    // created a 2nd morph
+    // created a 2nd morph https://w7.pngwing.com/pngs/952/535/png-transparent-of-groot-illustration-baby-groot-guardians-of-the-galaxy-vol-2-rocket-raccoon-sideshow-collectibles-groot-guardians-of-the-galaxy-fictional-character-action-toy-figures-toy-thumbnail.png
     evolveBaby(){
         if(groot.age > 14) {
-            $("img").attr("src", "https://w7.pngwing.com/pngs/952/535/png-transparent-of-groot-illustration-baby-groot-guardians-of-the-galaxy-vol-2-rocket-raccoon-sideshow-collectibles-groot-guardians-of-the-galaxy-fictional-character-action-toy-figures-toy-thumbnail.png");
+            $("img").attr("src", "https://images.squarespace-cdn.com/content/v1/5776adbbe4fcb553f21d3d72/1494283873606-WG3PSOSVNYWA9PP5I1HH/ke17ZwdGBToddI8pDm48kNvT88LknE-K9M4pGNO0Iqd7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QPOohDIaIeljMHgDF5CVlOqpeNLcJ80NK65_fV7S1UU_i9-ln4sAC0TGEmkfMFKJn5Kcyb6Y0O9dBHu3N61jtpC969RuPXvt2ZwyzUXQf7Q/I-am-Groot.gif?format=2500w");
             $("h2").text("Kid Groot");
             $("h3").text("I am Groot.");
         }  
