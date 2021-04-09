@@ -69,7 +69,7 @@ const grootagotchi = {
     resttime: 10,
 
     
-    // 2. Step Two 
+    // 2. Step Two TIMERS & METRICS
     // display metrics of pet
     // -age
     // -hunger
@@ -84,7 +84,10 @@ const grootagotchi = {
         grootagotchi.time--; 
         if(grootagotchi.time === 0) {
             groot.age++;
-            grootagotchi.evolveGroot(); //calling evolve
+            grootagotchi.evolveSeed(); //calling evolve
+            grootagotchi.evolveBaby();
+            grootagotchi.evolveKid();
+            grootagotchi.gameWon();
             grootagotchi.time = 10; //10 seconds?
             $("#age").text(`Age: ${groot.age} days old`);
         }
@@ -144,19 +147,31 @@ const grootagotchi = {
         setInterval(grootagotchi.decreaseRest, 500);
     },
 
-    //Step 4 
+    //Step 4 MORPH PET
     // create a method that will evolve seedling groot to baby groot 
     // once groot's age hits 10 days then he will become baby groot
     // Maiki helped me call the evolve groot within all metric timers 
     
-    evolveGroot(){
+    evolveSeed(){
         if(groot.age > 9) {
             $("img").attr("src", "https://easydrawingguides.com/wp-content/uploads/2019/03/Baby-Groot-10.png");
             $("h2").text("Baby Groot");
-        } else if(groot.age > 15) {
-            $("img").attr("src", "https://www.pngfind.com/pngs/m/657-6571499_groot-guardians-of-the-galaxy-cartoon-hd-png.png");
+         } 
+    },
+    // originally created a "else if" statement but it didn't work so i'm guessing it exits the code block after first "if".
+    // created a 2nd morph
+    evolveBaby(){
+        if(groot.age > 14) {
+            $("img").attr("src", "https://w7.pngwing.com/pngs/952/535/png-transparent-of-groot-illustration-baby-groot-guardians-of-the-galaxy-vol-2-rocket-raccoon-sideshow-collectibles-groot-guardians-of-the-galaxy-fictional-character-action-toy-figures-toy-thumbnail.png");
             $("h2").text("Kid Groot");
-        } // "else if" isn't running for some reason
+        }  
+    },
+    // 3rd morph
+    evolveKid(){
+        if(groot.age > 20) {
+            $("img").attr("src", "https://static.wikia.nocookie.net/avengers-assemble/images/f/fd/Groot_Animated_Render_02.png/revision/latest?cb=20180324115724");
+            $("h2").text("I AM GROOT");
+        }  
     },
 
     // end the game with a prompt
@@ -165,12 +180,18 @@ const grootagotchi = {
         if(groot.hunger === 0 || groot.entertained === 0 || groot.rest === 0){
             $("section").text("YOUR GROOT DIED! refresh page to restart!");
         }
-    }
+    },
+    //end game when player reaches certain age 
+    gameWon(){
+        if(groot.age === 30){
+            $("section").text("You won! refresh page to restart!");
+        }
+    },
     
-    //create warning prompts for pet, when metric are low
-    // sayPrompts(){
 
-    // }
+
+    //create warning prompts for pet, when metric are low
+    // sayPrompts(){}
 
 }
 // when clicked start timer for age growth and submit pet's name
@@ -211,7 +232,7 @@ createName();
 
 
 
-// Step 3.
+// Step 3. BUTTONS FOR METRICS
 // make buttons for metrics, lets sanity check first, maybe make a create method later?
 // buttons to increase by one in metrics 
 
