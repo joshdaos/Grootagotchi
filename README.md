@@ -36,6 +36,13 @@ Your Groot needs food, attention, and sleep!
 # Wireframe:
 - https://joshdaos986755.invisionapp.com/freehand/Groot-Tamagotchi-7Iue3vi9Y
 
+# Code Snippets:
+https://imgur.com/zZihEeU (submit name method)
+
+https://imgur.com/EZvxuqI (timers)
+
+https://imgur.com/76wz2sx (buttons)
+
 
 # Demo:
 Click below to Play! 
