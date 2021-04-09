@@ -39,5 +39,5 @@ Your Groot needs food, attention, and sleep!
 
 # Demo:
 Click below to Play! 
-- file:///Users/joshuadaos/sei/projects/project-zero/index.html
+- https://pages.git.generalassemb.ly/joshdaos/Grootagotchi-Project-Zero/
 
