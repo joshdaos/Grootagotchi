@@ -1,6 +1,6 @@
  GROOTAGOTCHI PROJECT ZERO - Josh Daos
 
-<img src="/Users/joshuadaos/Desktop/Screen Shot 2021-04-08 at 11.28.20 PM.png">
+![Grootagotchi screenshot](groot.png)
 
 ## Welcome to Grootagotchi
 
