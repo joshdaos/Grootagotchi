@@ -34,13 +34,13 @@ Brief overview
 // Sleepiness (1-10 scale)~
 // Boredom (1-10 scale)~
 // Age (timer?) ~
-// Add buttons to the screen to feed your pet, turn off the lights, and play with your pet.
+// Add buttons to the screen to feed your pet, turn off the lights, and play with your pet. ~ (needs to turn off lights)
 // Add the ability to name your pet. ~
 // Style the page.~ (somewhat)
 // Increase your pet's age every x minutes ~
 // Increase your pet's Hunger, Sleepiness, and Bored metrics on an interval of your choosing. ~
-// You pet should die if Hunger, Boredom, or Sleepiness hits 10.
-// Morph your pet at certain ages.
+// You pet should die if Hunger, Boredom, or Sleepiness hits 10. ~
+// Morph your pet at certain ages. ~
 // Animate your pet across the screen while it's alive.
 
 
@@ -94,7 +94,7 @@ const grootagotchi = {
     },
     
     ageTimer(){
-       setInterval(grootagotchi.increaseAge, 400);
+       setInterval(grootagotchi.increaseAge, 400);  // 400 means .4 seconds, this is multiplying to the time displayed
     },
 
     //  create methods (connect to grow btn) that will minus the obj groot's props,
@@ -112,7 +112,7 @@ const grootagotchi = {
     },
     
     hungerTimer(){
-        setInterval(grootagotchi.decreaseHunger, 500);
+        setInterval(grootagotchi.decreaseHunger, 500); //500 is .5 seconds, a half of a second
     },
 
 
@@ -156,6 +156,7 @@ const grootagotchi = {
         if(groot.age > 9) {
             $("img").attr("src", "https://easydrawingguides.com/wp-content/uploads/2019/03/Baby-Groot-10.png");
             $("h2").text("Baby Groot");
+            $("h3").text("i am groot..");
          } 
     },
     // originally created a "else if" statement but it didn't work so i'm guessing it exits the code block after first "if".
@@ -164,13 +165,16 @@ const grootagotchi = {
         if(groot.age > 14) {
             $("img").attr("src", "https://w7.pngwing.com/pngs/952/535/png-transparent-of-groot-illustration-baby-groot-guardians-of-the-galaxy-vol-2-rocket-raccoon-sideshow-collectibles-groot-guardians-of-the-galaxy-fictional-character-action-toy-figures-toy-thumbnail.png");
             $("h2").text("Kid Groot");
+            $("h3").text("I am Groot.");
         }  
     },
     // 3rd morph
+    // becomes 20 
     evolveKid(){
-        if(groot.age > 20) {
+        if(groot.age > 19) {
             $("img").attr("src", "https://static.wikia.nocookie.net/avengers-assemble/images/f/fd/Groot_Animated_Render_02.png/revision/latest?cb=20180324115724");
-            $("h2").text("I AM GROOT");
+            $("h2").text("Adult Groot");
+            $("h3").text("I AM GROOT!");
         }  
     },
 
@@ -182,8 +186,9 @@ const grootagotchi = {
         }
     },
     //end game when player reaches certain age 
+    //becomes 25
     gameWon(){
-        if(groot.age === 30){
+        if(groot.age === 24){
             $("section").text("You won! refresh page to restart!");
         }
     },
