@@ -84,6 +84,7 @@ const grootagotchi = {
         grootagotchi.time--; 
         if(grootagotchi.time === 0) {
             groot.age++;
+            grootagotchi.evolveGroot(); //call the function?
             grootagotchi.time = 10; //10 seconds?
             $("#age").text(`Age: ${groot.age} days old`);
         }
@@ -101,6 +102,7 @@ const grootagotchi = {
         grootagotchi.hungertime--; 
         if(grootagotchi.hungertime === 0) {
             groot.hunger--;
+            grootagotchi.endGame();
             grootagotchi.hungertime = 10; //10 seconds?
             $("#hunger").text(`Hunger: ${groot.hunger}/10`);
         }
@@ -116,6 +118,7 @@ const grootagotchi = {
         grootagotchi.entertainedtime--; 
         if(grootagotchi.entertainedtime === 0) {
             groot.entertained--;
+            grootagotchi.endGame();
             grootagotchi.entertainedtime = 10; //10 seconds?
             $("#entertained").text(`Entertained: ${groot.entertained}/10`);
         }
@@ -131,6 +134,7 @@ const grootagotchi = {
         grootagotchi.resttime--; 
         if(grootagotchi.resttime === 0) {
             groot.rest--;
+            grootagotchi.endGame();
             grootagotchi.resttime = 10; //10 seconds?
             $("#rest").text(`Rest: ${groot.rest}/10`);
         }
@@ -140,23 +144,22 @@ const grootagotchi = {
         setInterval(grootagotchi.decreaseRest, 500);
     },
 
+
     // create a method that will evolve seedling groot to baby groot 
-    // not working, also need to fix timer, too slow
+    // once groot's age hits 10 days then he will become baby groot
+    // Maiki helped me call the evolve groot within all metric timers 
+    
     evolveGroot(){
-        if(groot.age > 2) {
-            $("img").remove("src");
+        if(groot.age > 10) {
             $("img").attr("src", "https://easydrawingguides.com/wp-content/uploads/2019/03/Baby-Groot-10.png");
         };
     },
 
     // end the game with a prompt, create a restart button?
+    // currently needs work 
     endGame(){
-        if(groot.hunger || groot.entertained || groot.rest === 0){
-            $(".box").html("<h1>GAME OVER!</h1>");
-            $("section").html("<h1>GAME OVER!</h1>");
-            $(".box").text("<h1>GAME OVER!</h1>");
-            $("section").text("<h1>GAME OVER!</h1>");
-
+        if(groot.hunger === 0 || groot.entertained === 0 || groot.rest === 0){
+            $("section").text("YOUR GROOT DIED! refresh page to restart!");
         }
     }
 
@@ -181,7 +184,6 @@ $("#submit-name").click(function (){
 });
 
 // create a start button that will function startTime
-
 // Created a function that logs the name of the grootagotchi
 // Thanks to Maiki she helped me get rid of the form tag that caused me to refresh page when I would submit a name
 
@@ -209,6 +211,7 @@ const clickWater = function clickWater(event){
      console.log("clicked a water buttton");
      if(groot.hunger <= 10){
          groot.hunger++;
+         $("#hunger").text(`Hunger: ${groot.hunger}/10`);
      }
 }
 $('#water').on('click', clickWater);
@@ -217,7 +220,8 @@ $('#water').on('click', clickWater);
 const clickPlay = function clickPlay(event){
     console.log("clicked a play buttton");
     if(groot.entertained <= 10){
-        groot.entertained;
+        groot.entertained++;
+        $("#entertained").text(`Entertained: ${groot.entertained}/10`);
     }
 }
 $('#play').on('click', clickPlay);
@@ -228,6 +232,7 @@ const clickSleep = function clickSleep(event){
     console.log("clicked a sleep buttton");
     if(groot.rest <= 10){
         groot.rest++;
+        $("#rest").text(`Rest: ${groot.rest}/10`);
     }
 }
 $('#sleep').on('click sleep', clickSleep);
