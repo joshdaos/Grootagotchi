@@ -1,6 +1,6 @@
  GROOTAGOTCHI PROJECT ZERO - Josh Daos
 
-![Grootagotchi screenshot]("Grootagotchi.jpg")
+![Grootagotchi screenshot](Grootagotchi.jpg)
 
 ## Welcome to Grootagotchi
 
