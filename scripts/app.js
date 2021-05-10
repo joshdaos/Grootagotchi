@@ -201,7 +201,7 @@ const grootagotchi = {
     
     //Step 6 ANIMATE
     //animate pet across screen 
-
+    //improvised and used gif pictures
 
 
 
