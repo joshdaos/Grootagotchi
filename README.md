@@ -34,7 +34,7 @@ Your Groot needs food, attention, and sleep!
 - JQUERY
 
 # Wireframe:
-- https://joshdaos986755.invisionapp.com/freehand/Groot-Tamagotchi-7Iue3vi9Y
+![Wireframe groot](https://imgur.com/52lG3kP.jpg)
 
 # Code Snippets:
 https://imgur.com/zZihEeU (submit name method)
