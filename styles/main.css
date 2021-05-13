@@ -22,6 +22,12 @@ h1 {
     box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.2);
     margin: 0px 150px 20px 150px;
     text-decoration: underline;
+    width: 1000px;
+}
+
+.header {
+    display: flex;
+    justify-content: center; 
 }
 
 body {
@@ -36,6 +42,7 @@ body {
     text-align: center;
     border-radius: 20px;
     border: 5px solid #81b29a;
+    width: 1000px;
 }
 
 .box h2 {
@@ -139,10 +146,13 @@ p {
 }
 
 .img {
-    background-color: rgba(300, 260, 180);
+    /* background-color: rgba(300, 260, 180); */
+    background-image: url("https://media1.giphy.com/media/l378xkeQk4wF3g9yg/200w.webp?cid=ecf05e47csytjo1db7d42kjuraij8yc21bwg2brz3p9qtw7q&rid=200w.webp&ct=g");
     border: 7px solid #81b29a;
     border-radius: 20px;
     box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.2);
+    background-repeat:repeat-x;
+    background-color: #c99e5d;
 }
 
 #output-name {
@@ -171,5 +181,10 @@ section {
     font-family: 'Orbitron', sans-serif;
     font-size: 50px;
     color: aquamarine;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
 }
 /* doesn't edit warning pop up, might need to fix later */
