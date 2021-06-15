@@ -45,6 +45,5 @@ https://imgur.com/76wz2sx (buttons)
 
 
 # Demo:
-Click below to Play! 
-- https://pages.git.generalassemb.ly/joshdaos/Grootagotchi-Project-Zero/
+Click [Here](https://pages.git.generalassemb.ly/joshdaos/Grootagotchi-Project-Zero/) to Play!
 
