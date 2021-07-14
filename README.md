@@ -1,7 +1,7 @@
- GROOTAGOTCHI PROJECT ZERO - Josh Daos
+# GROOTAGOTCHI PROJECT ZERO - Josh Daos
  
  
-# Demo:
+## Demo:
 Click [Here](https://pages.git.generalassemb.ly/joshdaos/Grootagotchi-Project-Zero/) to Play!
 
 ![Grootagotchi screenshot](https://imgur.com/IVXOMKW.jpg)
