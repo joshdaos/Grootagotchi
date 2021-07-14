@@ -1,4 +1,8 @@
  GROOTAGOTCHI PROJECT ZERO - Josh Daos
+ 
+ 
+# Demo:
+Click [Here](https://pages.git.generalassemb.ly/joshdaos/Grootagotchi-Project-Zero/) to Play!
 
 ![Grootagotchi screenshot](https://imgur.com/IVXOMKW.jpg)
 
@@ -42,8 +46,4 @@ https://imgur.com/zZihEeU (submit name method)
 https://imgur.com/EZvxuqI (timers)
 
 https://imgur.com/76wz2sx (buttons)
-
-
-# Demo:
-Click [Here](https://pages.git.generalassemb.ly/joshdaos/Grootagotchi-Project-Zero/) to Play!
 
